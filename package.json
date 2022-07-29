@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "sass src/assets/sass/style.scss dist/css/style.css --no-source-map --style=expanded --watch & tailwindcss build -i src/assets/tailwind.css -o dist/css/tailwind.css --watch "
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "sass": "^1.54.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
