@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <!-- 書籍情報を一覧表示 (キーはid) -->
-    <p>{{ bookCount }}件の本が積まれています。</p>
+    <p class="p-6 text-center">{{ bookCount }}件の本が積まれています。</p>
     <BookInfo v-for="(b, i) of books"
       v-bind:linkable="true" 
       v-bind:flag="true"

@@ -1,17 +1,20 @@
 <template>
-  <div class="clearfix">
-    <div class="image" v-bind:class="{ linkable: linkable }" v-on:click="onclick">
-      <img v-bind:src="book.image" v-bind:alt="book.title">
-    </div>
-    <div class="details">
-      <ul>
-        <!-- <li v-if="index">{{ index }}.</li> -->
-        <li>{{ book.title }}</li>
-        <li>{{ book.author }} 著</li>
-        <li>{{ book.price }} 円</li>
-      </ul>
-      <div v-if="flag" v-bind:href="book.linkurl" :underline="false" target="_blank">買おうかな</div>
-      <div v-if="flag" v-on:click="onremove">削除</div>
+  <div class="item_list border-b">
+    <div class="flex item p-6 border-t">
+      <div class="sm:w-64" v-bind:class="{ linkable: linkable }" v-on:click="onclick">
+        <img v-bind:src="book.image" v-bind:alt="book.title" class="w-full">
+      </div>
+      <div class="w-full pl-4 sm:pl-6">
+        <ul class="mb-3">
+          <li class="text-2xl mb-2">{{ book.title }}</li>
+          <li class="text-xs text-gray-400 mb-2">{{ book.author }} 著</li>
+          <li class="text-2xl">{{ book.price }} <span class="text-lg">円</span></li>
+        </ul>
+        <div class="flex">
+          <a class="btn _btn-primary rounded-md py-2 px-3 text-sm mr-2" v-if="flag" v-bind:href="book.linkurl" v-bind:underline="false" target="_blank">買おうかな</a>
+          <div class="btn _btn-gray rounded-md py-2 px-3 text-sm" v-if="flag" v-on:click="onremove">取り消し</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -48,39 +51,3 @@
     }
   }
 </script>
-
-
-<style scoped>
-.linkable:hover {
-  cursor: pointer;
-  background-color: #ff9;
-}
-
-.image {
-  float:left;
-}
-
-.image img {
-  height: 180px;
-}
-
-.details {
-  float: left;
-}
-
-.details li {
-  list-style-type: none;
-  text-align: left;
-}
-
-.clearfix {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-</style>

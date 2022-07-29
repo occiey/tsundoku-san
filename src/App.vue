@@ -11,6 +11,7 @@
     </nav>
     <p class="flex justify-center pt-8 px-8 text-center">積読さんはただ気になる本を積むだけのメモサイトです。</p>
   </header>
-
-  <router-view></router-view>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
