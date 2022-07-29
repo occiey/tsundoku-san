@@ -14,4 +14,7 @@
   <main>
     <router-view></router-view>
   </main>
+  <footer>
+    <div class="py-10 px-20 text-center text-gray-400 text-xs">©TSUNDOKU-SAN</div>
+  </footer>
 </template>
