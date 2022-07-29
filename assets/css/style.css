@@ -1,0 +1,28 @@
+body {
+  font-family: "M PLUS Rounded 1c";
+}
+
+html:before,
+html:after,
+body:before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 10px solid #20a1b7;
+}
+
+html:after {
+  z-index: 10;
+  top: auto;
+  border-width: 0 0 10px;
+}
+
+body:before {
+  z-index: 10;
+  bottom: auto;
+  border-width: 10px 0 0;
+}
