@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import installElementPlus from './plugins/element'
+require('./assets/css/scss/style.scss')
+require('./assets/css/tailwind.css')
 
 const app = createApp(App)
 

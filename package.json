@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve & sass src/assets/scss/style.scss dist/css/style.css --no-source-map --style=expanded --watch & tailwindcss build -i src/assets/tailwind.css -o dist/css/tailwind.css --watch",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "sass src/assets/sass/style.scss dist/css/style.css --no-source-map --style=expanded --watch & tailwindcss build -i src/assets/tailwind.css -o dist/css/tailwind.css --watch "
+    "dev": "sass src/assets/scss/style.scss dist/css/style.css --no-source-map --style=expanded --watch & tailwindcss build -i src/assets/tailwind.css -o dist/css/tailwind.css --watch"
   },
   "dependencies": {
     "@element-plus/theme-chalk": "^2.2.6",
