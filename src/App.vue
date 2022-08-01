@@ -18,3 +18,15 @@
     <div class="py-10 px-20 text-center text-gray-400 text-xs">©TSUNDOKU-SAN</div>
   </footer>
 </template>
+
+
+<script>
+  export default {
+    mounted () {
+      document.body.classList.add('p-2.5')
+    },
+    unmounted () {
+      document.body.classList.remove('p-2.5')
+    }
+  }
+</script>

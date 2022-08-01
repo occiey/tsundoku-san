@@ -16,8 +16,10 @@
         v-bind:total="bookCount" v-bind:page-size="2" v-on:current-change="onchange">
       </el-pagination>
     </div>
-    <div>
-      <el-button type="primary" v-on:click="onclear">積んだ本をすべて削除</el-button>
+    
+    <div v-if="bookCount > 0" class="flex justify-center p-10">
+      <div class="btn _btn-gray rounded-full py-4 px-6 sm:w-64 cursor-pointer" 
+           v-on:click="onclear">積んだ本をすべてクリア</div>
     </div>
   </div>
 </template>
@@ -33,7 +35,7 @@ export default {
   data(){
     return {
       books: [],
-      page: 1
+      page: 1,
     }
   },
   // ローカルコンポーネントを登録
@@ -70,3 +72,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .linkable {
+    cursor: pointer;
+  }
+</style>
